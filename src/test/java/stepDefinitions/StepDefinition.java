@@ -24,10 +24,10 @@ public class StepDefinition extends Utils{
 	TestDataBuild data = new TestDataBuild();
 	
 
-	@Given("Add place Payload")
-	public void add_place_payload() throws IOException {
+	@Given("Add place Payload with {string} {string} and {string}")
+	public void add_place_payload_with_and(String name, String language, String address) throws IOException {
 		
-		request = given().spec(requestSpecification()).body(data.addPlacePayLoad());
+		request = given().spec(requestSpecification()).body(data.addPlacePayLoad(name, language, address));
 		//res = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
 	}
 

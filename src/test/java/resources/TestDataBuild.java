@@ -7,13 +7,13 @@ import pojo.AddPlace;
 import pojo.Location;
 
 public class TestDataBuild {
-	public AddPlace addPlacePayLoad() {
-		
+	public AddPlace addPlacePayLoad(String name, String language, String address) {
+
 		AddPlace p = new AddPlace();
 		p.setAccuracy(50);
-		p.setAddress("29, side layout, cohen 09");
-		p.setLanguage("French-IN");
-		p.setName("Frontline house");
+		p.setAddress(address);
+		p.setLanguage(language);
+		p.setName(name);
 		p.setPhone_number("(+91) 983 893 3937");
 		p.setWebsite("http://google.com");
 		List<String> myList = new ArrayList<String>();
@@ -25,7 +25,7 @@ public class TestDataBuild {
 		l.setLng(33.427362);
 		p.setLocation(l);
 		return p;
-		
+
 	}
 
 }
